@@ -1,9 +1,10 @@
 import dbClient from '../config/dbClient.js';
 
 class mascotasModel{
-    async create(req, res){
+    
+    async create(mascota){
         const colMascotas = dbClient.db.collection('mascotas');
-        await colMascotas.insertOne(mascota)
+        return await colMascotas.insertOne(mascota)
     }
 }
 

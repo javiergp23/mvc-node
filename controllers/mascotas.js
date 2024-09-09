@@ -6,7 +6,7 @@ class mascotasController{
 
     async create(req, res){
         try{
-            const data = mascotasModel.create(req.body);
+            const data = await mascotasModel.create(req.body);
             res.status(201).json(data);
         }catch(error){
             res.status(500).send(error);
